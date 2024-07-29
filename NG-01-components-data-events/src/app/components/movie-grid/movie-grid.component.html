@@ -1,0 +1,7 @@
+@if(films()) {
+  <div class="movie-grid grid grid-cols-4 gap-4 p-4">
+  @for (film of films(); track film.id) {
+    <movie-item [movie]="film" />
+  }
+  </div>
+}
