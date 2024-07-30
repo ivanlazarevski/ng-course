@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "NG-01-components-data-events": {
+    "NG-02-lifecycle-and-directives": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
