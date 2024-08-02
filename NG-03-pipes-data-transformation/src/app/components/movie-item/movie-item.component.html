@@ -1,0 +1,11 @@
+@if(movie()) {
+  <div class="film-card rounded-3xl relative" (click)="deleteFilm(movie()?.id)"
+       [ngClass]="{'border-4 border-green-500 border-solid': movieScore() > 90}"
+  >
+    <img class="rounded-3xl" [src]="movie()?.image" alt="">
+    <div class="font-bold bg-ng-primary p-1 release-date absolute top-4 left-0 rounded-r-xl">{{movie()?.release_date | date:"MMM d, yyyy"}}</div>
+    <div class="font-bold bg-ng-accent p-1 release-date absolute bottom-4 left-0 rounded-r-xl">{{movie()?.director | uppercase}}</div>
+    <div class="font-bold bg-ng-dark text-white p-1 release-date absolute bottom-16 right-0 rounded-l-xl">{{this.ticketPrice() | currency: "EUR": "symbol": "1.2-4"}}</div>
+    <div class="top-0 left-0 h-full w-full absolute bg-gradient-to-t from-ng-primary to-ng-dark opacity-25 z-10 rounded-3xl"></div>
+  </div>
+}
