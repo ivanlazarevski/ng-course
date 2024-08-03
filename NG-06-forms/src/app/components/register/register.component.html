@@ -1,0 +1,25 @@
+<div class="register-page h-screen">
+  <form (ngSubmit)="registerUser()" class="register-form flex flex-col justify-center items-center" [formGroup]="registerForm">
+    <div class="form-group w-fit">
+      <div class="form-label">Email</div>
+      <input autocomplete="off" type="email" class="form-input px-4 py-2 bg-ng-dark bg-opacity-15 outline-0" formControlName="email">
+    </div>
+    <div class="form-group w-fit">
+      <div class="form-label">Password</div>
+      <input type="password" class="form-input px-4 py-2 bg-ng-dark bg-opacity-15 outline-0" formControlName="password">
+    </div>
+    <div class="form-group w-fit">
+      <div class="form-label">First Name</div>
+      <input autocomplete="off" type="text" class="form-input px-4 py-2 bg-ng-dark bg-opacity-15 outline-0" formControlName="firstName">
+    </div>
+    <div class="form-group w-fit">
+      <div class="form-label">Last Name</div>
+      <input autocomplete="off" type="text" class="form-input px-4 py-2 bg-ng-dark bg-opacity-15 outline-0" formControlName="lastName">
+    </div>
+    <div class="form-group w-fit">
+      <div class="form-label">Age</div>
+      <input autocomplete="off" type="number" class="form-input px-4 py-2 bg-ng-dark bg-opacity-15 outline-0" formControlName="age">
+    </div>
+    <button class="reg-btn mt-4 bg-ng-accent px-24 py-2" type="submit" [disabled]="registerForm.invalid">Register</button>
+  </form>
+</div>
